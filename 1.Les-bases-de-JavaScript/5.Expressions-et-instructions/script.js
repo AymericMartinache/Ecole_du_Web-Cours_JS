@@ -14,7 +14,6 @@ console.log(100 > 50);
 console.log(80 + 60 === 140);
 console.log(45 + 10 + 40);
 
-
 /* 
 Une instruction (statement), est une action que doit réaliser la machine qui exécute le code en question. 
 
@@ -34,7 +33,16 @@ for, do...while, while, for...in/of
 */
 
 // Instruction if
+if (50 > 10) {
+    console.log('50 est supérieur à 10');
+}
 
-// Déclaration de function 
+// Déclaration de function
+function foo() {
+    return 10 * 10;
+}
+console.log(foo());
 
 // Déclaration d'une constante
+const userName = 'Aymeric';
+console.log(userName);

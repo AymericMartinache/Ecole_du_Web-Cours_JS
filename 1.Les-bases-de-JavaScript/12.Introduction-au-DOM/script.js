@@ -17,8 +17,18 @@
 
 */
 
+const title = document.querySelector('h1');
+console.log('Le type : ', typeof title);
+console.dir(title);
+console.log('Le H1 du DOM : ', title);
 
+// On peut modifier le texte par exemple:
+title.textContent = 'Le texte du H1 a été modifié';
+console.log(title);
 
+// On peut modifier le style :
+title.style.backgroundColor = 'purple';
+title.style.color = '#FFF';
 
 /* 
   2. Le BOM pour Browser object model, est l'objet global.
@@ -33,4 +43,4 @@
 
   Et des APIs pratiques comme History pour gérer l'historique.
 */
-
+console.log('Le BOM (Browser Object Model) : ', window);

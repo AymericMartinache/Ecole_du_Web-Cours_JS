@@ -20,7 +20,6 @@
 
 */
 
-
 /* 
     2. Les opérateurs de comparaison.
 
@@ -32,6 +31,8 @@
     >=  Supérieur ou égal.
 */
 
+console.log('Renvoie true (5 > 2) =>', 5 > 2);
+console.log('Renvoie false (2 > 5) =>', 2 > 5);
 
 /* 
     3. Les opérateurs d'égalité.
@@ -44,8 +45,6 @@
     !==  Inégalité stricte.
 */
 
-
-
 /* 
     4. Les opérateurs logiques.
 
@@ -57,24 +56,19 @@
 
 */
 
-
 /* 
     5. Les opérateurs d'affectation.
 
     Permettent d'affecter des valeurs après un calcul.
-
-    let num = 10;
-
     ++, ex num++ équivaut à num = num + 1 // 11
     --, ex num-- équivaut à num = num - 1 // 9
     +=, ex num += 20 équivaut à num = num + 20 // 30
     -=, ex num -= 20 équivaut à num = num - 20 // -10
     *=, ex num *= 10 équivaut à num = num * 10 // 100
-
-*/
-
-
-
-/*
-    Il existe beaucoup d'opérateurs plus confidentiels, mais il n'est pas utile de tous les passer en revue à ce stade de votre apprentissage.
-*/
+    
+    */
+let num = 10;
+num++;
+console.log(num);
+num += 20;
+console.log(num);

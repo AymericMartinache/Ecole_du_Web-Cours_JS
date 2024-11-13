@@ -6,3 +6,10 @@
 
 */
 
+const title = document.querySelector('h1');
+title.addEventListener('click', handleClick);
+
+function handleClick() {
+    console.log('Clicked !');
+    title.style.backgroundColor = 'orange';
+}

@@ -17,12 +17,16 @@
   Ex : getResults()
 */
 
-
+function addition(a, b) {
+    return a + b;
+}
+console.log('La somme des 2 paramètres est : ', addition(5, 2));
 
 // Les fonctions sont des objets, même si typeof retourne "function"
 
 // On appelle les functions des "first class objects", car on peut les exécuter.
 
+console.log('Le type est : ', typeof addition);
 
 /* 
     2. Nommer une fonction.
@@ -32,20 +36,17 @@
 
     Utilisez des verbes+XXX() comme get,is,read,are,has...
 */
-
 /* 
     Voici quelques exemples de débuts de nom communs utiles.
 */
-    // "get...()"       –  Retourne une valeur ex : getWeather()
-    // "is...()"        -  Retourune une valeur booléenne true ou false ex : isAuthenticated()
-    // "calc...()"      –  Effectue un calcul.
-    // "create...()"    –  Crée quelque chose, ex : createListElement(),
-    // "check...()"     –  Retourne un booléen, similaire à is...().
-    // "to...()"        -  Effectuer une conversion, ex : toEur()
-    // "has...()"       -  Vérifie si un objet possède une certaine propriété ou valeur, ex : hasAdminAccess()
-    //  etc ...
-
-
+// "get...()"       –  Retourne une valeur ex : getWeather()
+// "is...()"        -  Retourune une valeur booléenne true ou false ex : isAuthenticated()
+// "calc...()"      –  Effectue un calcul.
+// "create...()"    –  Crée quelque chose, ex : createListElement(),
+// "check...()"     –  Retourne un booléen, similaire à is...().
+// "to...()"        -  Effectuer une conversion, ex : toEur()
+// "has...()"       -  Vérifie si un objet possède une certaine propriété ou valeur, ex : hasAdminAccess()
+//  etc ...
 
 /* 
     3. Les fonctions fléchées
@@ -55,5 +56,5 @@
     Nous les analyserons en détail dans une section ultérieure.
 */
 
-
-const multiply = (a,b) => a * b;
+const multiply = (a, b) => a * b;
+console.log(multiply(50, 10));

@@ -6,15 +6,13 @@
 
 */
 
-    // LET UsErNaMe = "John";     
-    // const _id = 99;
-    // let class = true;
-    // const isAdult = true;
-    // const $card = {name: "card", content: "Lorem ipsum"};
-    // let 1452 = 1452;
-    // const sum41 = "music";
-
-
+// LET UsErNaMe = "John";   FAUX
+// const _id = 99;  CORRECT (autorisé de commencer avec _ )
+// let class = true; FAUX class est resérvé
+// const isAdult = true; CORRECT
+// const $card = {name: "card", content: "Lorem ipsum"}; CORRECT
+// let 1452 = 1452; FAUX
+// const sum41 = "music"; CORRECT
 
 /* 
     2. Trouver un bon nom; 
@@ -36,30 +34,54 @@
     J. Une fonction qui ajoute une animation 
 */
 
-//A.
-// = true;
-//B. 
-// = false;
-//C.
-// = [2450,1850,4712,3254,2000,1578]
-//D. 
-/*
- = {
-    temperature : 27,
-    humidity: 45,
-    wind: 14
-}
-*/
-// E
-// = 4251
-// F
-// = "Vous ne pouvez pas faire ça"
-// G
-/* function xxx(){}*/
-// H
-/* function xxx(){}*/
-// I
-/* function xxx(){}*/
-// J
-/* function xxx(){}*/
+// A.
+let isOnline = true;
 
+// B.
+let isModerator = false;
+
+// C.
+const salaries = [2450, 1850, 4712, 3254, 2000, 1578];
+
+// D.
+let currentWeather = {
+    temperature: 27,
+    humidity: 45,
+    wind: 14,
+};
+console.log('Météo : ', currentWeather);
+
+// E.
+let scrollHeight = 4251;
+
+// F.
+const alertMessage = 'Vous ne pouvez pas faire ça';
+
+// G.
+function getUserInfo() {
+    console.log('Infos utilisateur');
+}
+getUserInfo();
+
+// H.
+let age = 12;
+function isAdult() {
+    if (age > 18) {
+        console.log(`L'utilisateur est adulte`);
+    } else {
+        console.log(`L'utilisateur n'est pas adulte`);
+    }
+}
+isAdult();
+
+// I.
+function createButton() {
+    console.log("Création d'un bouton");
+}
+createButton();
+
+// J.
+function addAnimation() {
+    console.log(`Ajout de l'animation`);
+}
+addAnimation();

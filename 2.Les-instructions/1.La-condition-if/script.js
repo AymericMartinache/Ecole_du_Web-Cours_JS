@@ -13,3 +13,6 @@
 const nb1 = 200;
 const nb2 = 400;
 
+if (nb1 < nb2) {
+    console.log('Condition true, instruction exécutées');
+}

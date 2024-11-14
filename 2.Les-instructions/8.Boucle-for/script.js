@@ -16,25 +16,27 @@
 */
 
 // boucle avec incrémentation
-
-
-
+// for (let i = 1; i <= 5; i++) {
+//     console.log(i);
+// }
 
 // Nous pouvons aussi décrémenter
-
-
-
+// for (let i = 10; i >= 10; i--) {
+//     console.log(i);
+// }
 
 // Ou effectuer toutes les opérations possibles sur l'expression initiale
-
-
-
+// for (let i = 0; i <= 100; i += 10) {
+//     console.log(i);
+// }
 
 // On utilise souvent une boucle for pour effectuer une opération sur tous les éléments d'un tableau.
-const numbers = [1,2,3,4,5];
-
-
-
+const numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers.length; i++) {
+    // console.log(numbers[i]);
+    numbers[i]++;
+}
+console.table(numbers);
 
 /* 
     2. Il existe deux instructions utiles dans les boucles : break et continue.
@@ -43,5 +45,16 @@ const numbers = [1,2,3,4,5];
 
     L'instruction continue permet de passer à l'itération suivante plus tôt.
 */
+for (let i = 1; i <= 10; i++) {
+    // Break
+    // console.log(i);
+    // if (i === 5) {
+    //     break;
+    // }
 
-
+    // Continue
+    if (i === 2) {
+        continue;
+    }
+    console.log(i);
+}

@@ -10,6 +10,8 @@
 
 let isAuthenticated = true;
 const user = {
-  name: "Hanz",
-  level: 99
-}
+    name: 'Hanz',
+    level: 99,
+};
+
+console.log(isAuthenticated && user);

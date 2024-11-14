@@ -7,4 +7,21 @@
 
 */
 
-const tShirtSize = "M";
+const tShirtSize = 'S';
+
+switch (tShirtSize) {
+    case 'XL':
+        console.log('Prix : 19,99€');
+        break;
+    case 'L':
+        console.log('Prix : 17,99€');
+        break;
+    case 'M':
+        console.log('Prix : 15,99€');
+        break;
+    case 'S':
+        console.log('Prix : 12,99€');
+        break;
+    default:
+        console.log('Taille incorrecte');
+}

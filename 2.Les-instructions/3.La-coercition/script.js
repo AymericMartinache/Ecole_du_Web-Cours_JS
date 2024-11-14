@@ -3,4 +3,14 @@
 */
 
 const nb1 = 150;
-const nb2 = "150";
+const nb2 = '150';
+
+if (nb1 == nb2) {
+    console.log('Instruction exécutée');
+}
+
+if (nb1 === nb2) {
+    console.log('Instruction exécutée');
+} else {
+    console.log('Retourne false');
+}

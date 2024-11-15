@@ -7,6 +7,7 @@
 */
 
 const squareFeet = 100;
+console.log(squareFeet > 70 ? 'Large' : 'Small / Medium');
 
 /* 
     2. Panique à la librairie.
@@ -15,16 +16,21 @@ const squareFeet = 100;
     Utilisez une boucle for ou for...of pour ça.
 */
 const library = [
-  {
-    name: "The Picture of Dorian Gray",
-    price: 7
-  },
-  {
-    name: "Harry Potter",
-    price: 10
-  },
-  {
-    name: "The old man and the sea",
-    price: 5
-  }
-]
+    {
+        name: 'The Picture of Dorian Gray',
+        price: 7,
+    },
+    {
+        name: 'Harry Potter',
+        price: 10,
+    },
+    {
+        name: 'The old man and the sea',
+        price: 5,
+    },
+];
+
+for (const book of library) {
+    book.price++;
+}
+console.log(library);

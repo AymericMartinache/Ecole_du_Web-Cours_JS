@@ -6,15 +6,21 @@
     for...of sert à itérer à travers des éléments itérables, comme les tableaux ou les chaînes de caractères.
 */
 
-
+// Boucle for in
 const person = {
-  name: "Cyril",
-  age: 35,
-  height: 188,
-  weight: 90
+    name: 'Cyril',
+    age: 35,
+    height: 188,
+    weight: 90,
+};
+
+for (const prop in person) {
+    console.log(prop, person[prop]);
 }
 
+// Boucle for of
+const fruits = ['🍓', '🍇', '🍑', '🍎', '🥭'];
 
-
-const fruits = ["🍓","🍇","🍑","🍎","🥭"]
-
+for (const fruit of fruits) {
+    console.log(fruit);
+}

@@ -14,13 +14,22 @@
     
     La seconde est plus populaire, mais ne peut utiliser d'expressions JS, donc à voir au cas par cas.
 */
+// Exemple de Regex pour un email
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// Exemple pour un numéro de téléphone
+const phoneRegex = /^\d{10}$/;
 
+const regex = /abc/;
+
+console.log('regex abc : ', regex.test('abc'));
+console.log('regex bac : ', regex.test('bac'));
+console.log('regex 123 : ', regex.test(123));
+console.log('email : ', emailRegex.test('test@test.com'));
+console.log('phone : ', phoneRegex.test('0123456789'));
 
 /*    
     2. Les options (drapeaux).
-
     On peut rajouter des lettres à la fin d'une regex afin de lui rajouter des fonctionnalités supplémentaires.
-
 
     A. 
     /g => la lettre g signifie qu'on teste la chaîne globalement, et qu'on ne s'arrête pas après la première correspondance.
@@ -33,8 +42,15 @@
 
     etc...
 */
+// A.
+const regexG = /abc/g;
+console.log('regexG abc : ', regexG.test('abc'));
+console.log('regexG bac : ', regexG.test('bac'));
 
-
+// B.
+const regexI = /a/i;
+console.log('regexI a : ', regexI.test('a'));
+console.log('regexI A : ', regexI.test('A'));
 
 /* 
     3. "Classe de caractères" : N'importe quel caractère de la liste entre les crochets. 
@@ -43,9 +59,7 @@
     /[e-l]/ un caractère entre e et l compris.
     /[2-4]/ un caractère entre 2 et 4 compris.
 
-
     Il existe des alternatives syntaxiques à ces classes qui permettent de créer une regex rapidement, mais il faut connaître les symboles par coeur.
-    
     \w  Correspond à tous les chiffres, les lettres et les underscores, équivalent à [a-zA-Z0-9_]
     \d  Correspond à un chiffre de 0 à 9, équivalent [0-9];
     \s	Correspond à tous les sauts à la ligne.
@@ -58,18 +72,24 @@
     \D  Tout ce qui n'est pas un digit, équivalent à [^0-9];
     \S	Correspond à tout ce qui n'est pas un retour à la ligne(tous les caractères).
 */
+const classRegexTest = /[a-z]/;
+console.log('classRegexTest a : ', classRegexTest.test('a'));
+console.log('classRegexTest z : ', classRegexTest.test('z'));
+console.log('classRegexTest 1 : ', classRegexTest.test('1'));
 
-
-
+const classRegexTest2 = /[0-9]/;
+console.log('classRegexTest2 1 : ', classRegexTest2.test('1'));
+console.log('classRegexTest2 9 : ', classRegexTest2.test('9'));
+console.log('classRegexTest2 a : ', classRegexTest2.test('a'));
 
 /* 
     4. Les caractères échappés.
 
     Que faire quand on recherche un caractère qui est déjà utilisé dans les symboles des regex ? Il faut l'échapper, c'est à dire mettre un anti-slash devant.
-
     \.  pour rechercher un point
     \\  pour rechercher un antislash
     Ou encore : \? \$ \+ \*
 */
-
-
+const escapeRegex = /\//;
+console.log('escapeRegex / : ', escapeRegex.test('/'));
+console.log('escapeRegex \\ : ', escapeRegex.test('\\'));

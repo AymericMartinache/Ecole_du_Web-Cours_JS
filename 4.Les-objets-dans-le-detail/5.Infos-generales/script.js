@@ -5,18 +5,18 @@
 */
 
 const city = {
-  name: "Bratislava",
-  population: 424000
-}
+    name: 'Bratislava',
+    population: 424000,
+};
 
-
-
-
+console.log(city);
+delete city.name;
+console.log(city);
 
 /* Attention, utiliser delete avec la propriété d'un tableau va remplacer l'élément supprimé par un élément empty */
-
-
-
+const array = [1, 2, 3, 4, 5];
+delete array[0];
+console.log(array);
 
 /* 
     2. Bracket et dot notation.
@@ -34,19 +34,35 @@ const city = {
 */
 
 const dog = {
-  name: "Riki",
-  legs: 4
-}
+    name: 'Riki',
+    legs: 4,
+    10: 9999,
+};
 
+console.log(dog.name);
+console.log(dog['10']);
 
 /* 
     3. Form raccourcie des méthodes.
 
     On peut utiliser des fonctions classiques et les fonctions fléchées dans les objets, voyons ensemble les différentes syntaxes.
 */
+const robot = {
+    // Fonction classique
+    aim: function () {
+        console.log('Aiming');
+    },
 
+    // Fonction classique raccourcie
+    shot() {
+        console.log('Shooting');
+    },
 
-
+    // Fonction fléchée
+    move: () => {
+        console.log('Moving');
+    },
+};
 
 /* 
     4. Les tableaux sont des objets.
@@ -55,7 +71,7 @@ const dog = {
 
     Chaque élément est accessible par son index, nous sommes donc en présence d'une propriété - valeur. 
 
-    // Cela ressemble beaucoup à un objet n'est-ce pas ?
+    Cela ressemble beaucoup à un objet n'est-ce pas ?
     [
       0: "🍓",
       1: "🍌",
@@ -67,10 +83,14 @@ const dog = {
 
 */
 
-const fruits = ["🍓","🍌","🍇"]
-
-
-
+const fruits = ['🍓', '🍌', '🍇'];
+console.log(fruits);
+console.log(typeof fruits);
+console.log(fruits.length);
+console.log(fruits[0], fruits['1']);
+fruits.test = 'nouveau ';
+console.log(fruits);
+console.log(fruits.test);
 
 /* 
     5. Les fonctions sont des objets.
@@ -79,4 +99,9 @@ const fruits = ["🍓","🍌","🍇"]
     Les fonctions sont des objets créés à partir du constructeur Function.
 
 */
-
+function foo() {
+    console.log('hello');
+}
+// Ajout d'une propriété à la fonction foo
+foo.customProp = 'customProp';
+console.dir(foo);

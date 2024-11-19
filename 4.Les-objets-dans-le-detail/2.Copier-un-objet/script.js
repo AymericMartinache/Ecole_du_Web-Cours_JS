@@ -6,9 +6,12 @@
 
 */
 
+const numbers = [1, 2, 3];
+const numbersCopy = numbers;
+console.log(numbersCopy);
 
-
-
+numbersCopy.push(4);
+console.log(numbersCopy);
 
 /* 
     2. Alors comment copier ?
@@ -19,13 +22,13 @@
 
     Vous sentez le bug arriver ?
 */
+const letters = ['a', 'b', 'c'];
+const lettersCopy = [...letters];
+console.log(lettersCopy);
 
-
-
-
-
-
-
+lettersCopy.push('d');
+console.log(letters);
+console.log(lettersCopy);
 
 /* 
     3. Faire une copie profonde, deep copy.
@@ -36,4 +39,14 @@
     B. Seconde manière de faire, utiliser la méthode structuredClone() qui permet de deep-clone facilement.
     Malheuresement, cette méthode ne permet pas de cloner des méthodes.
 */
+const deepObj = {
+    collection: {
+        a: 1,
+        b: 2,
+        c: 3,
+    },
+};
 
+const deepCopy = { collection: { ...deepObj.collection } };
+
+console.log(deepCopy);

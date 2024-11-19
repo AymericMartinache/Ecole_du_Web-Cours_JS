@@ -11,6 +11,10 @@ Le cours est structuré comme suit :
 
 2. **Les instructions**
 
+3. **Les fonctions dans le détail**
+
+4. **Les objets dans le détail**
+
 ## 🛠️ Technologies
 
 Ce projet utilise :

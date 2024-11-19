@@ -4,7 +4,8 @@
     Les BigInt representent des nombres supérieurs à (2^53) - 1
 */
 
-
 const bigIntNumber1 = 676878678676876877n;
-const bigIntNumber2 = 976878678676876877n;
+console.log('bigIntNumber1 : ', bigIntNumber1, typeof bigIntNumber1);
 
+const bigIntNumber2 = 976878678676876877n;
+console.log('bigIntNumber2 : ', bigIntNumber2, typeof bigIntNumber2);

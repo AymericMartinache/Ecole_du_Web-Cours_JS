@@ -16,5 +16,7 @@ console.log('Tableau splité : ', split);
 */
 
 let arr = ['a', 'b', 'c'];
-const join = arr.join(' ');
-console.log('Chaîne joinée : ', join);
+const join = arr.join('-');
+console.log('Chaîne concaténée : ', join);
+const join2 = arr.join('+');
+console.log('Chaîne concaténée : ', join2);

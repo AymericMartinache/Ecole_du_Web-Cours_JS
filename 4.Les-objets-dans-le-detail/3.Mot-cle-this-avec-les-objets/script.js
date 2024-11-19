@@ -9,3 +9,26 @@
     Il existe d'autres cas de figure dont nous parlerons plus tard.
 */
 
+const house = {
+    room: 5,
+    area: 200,
+    priceWithoutTaxe: 850000,
+    district: 7,
+
+    // Fonction classique
+    getFullePrice() {
+        return this.priceWithoutTaxe * 1.2;
+    },
+    // Fonction fléchée
+    convertSFtoSM: () => {
+        return this.area * 0.92;
+    },
+};
+
+console.log(house.getFullePrice());
+console.log(house.convertSFtoSM());
+
+function foo() {
+    return this;
+}
+console.log(foo());

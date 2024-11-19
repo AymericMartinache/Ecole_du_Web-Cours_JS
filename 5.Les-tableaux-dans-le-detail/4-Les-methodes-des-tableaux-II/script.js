@@ -48,7 +48,7 @@ letters.sort();
 console.log(letters);
 
 const numbers = [10, 55, 2, 250, 500, 85];
-numbers.sort();
+numbers.sort((a, b) => a - b);
 console.log(numbers);
 
 // On peut aussi trier des tableaux d'objets

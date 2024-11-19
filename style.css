@@ -11,3 +11,10 @@ body {
     height: 100vh;
     font-family: sans-serif;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}

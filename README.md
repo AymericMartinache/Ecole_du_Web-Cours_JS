@@ -25,6 +25,7 @@ Ce projet utilise :
 
 -   [MDN JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript) : Documentation complète sur JavaScript.
 -   [Node.js](https://nodejs.org/) : Pour exécuter du JavaScript côté serveur.
+-   [Ecole du web](https://www.ecole-du-web.net/) : Site de l'école du web.
 
 ---
 

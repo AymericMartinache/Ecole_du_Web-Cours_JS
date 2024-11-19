@@ -11,13 +11,19 @@
 
 */
 
-const animals = ["cat", "dog", "elephant", "lion", "peacock"]
+const animals = ['cat', 'dog', 'elephant', 'lion', 'peacock'];
 
-/* Avec une boucle for */ 
-
+/* Avec une boucle for */
+for (let i = 0; i < animals.length; i++) {
+    console.log('Boucle for', animals[i]);
+}
 
 /* Avec une boucle for...of */
-
-
+for (const animal of animals) {
+    console.log('Boucle for...of', animal);
+}
 
 /* Avec .forEach */
+animals.forEach((animal) => {
+    console.log('forEach', animal);
+});

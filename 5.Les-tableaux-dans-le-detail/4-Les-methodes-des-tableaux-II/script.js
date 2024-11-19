@@ -10,9 +10,15 @@
     Valeur de retour: l'accumulateur après toutes les opérations.
 
 */
+const marks = [18, 5, 17, 12, 20, 16, 14];
+const sum = marks.reduce((acc, mark) => acc + mark, 0);
+console.log(sum);
 
-const marks = [18,5,17,12,20,16,14]
-
+// math.truc permet de tronquer les décimales
+const mathMarks = Math.trunc(
+    marks.reduce((acc, mark) => acc + mark, 0) / marks.length
+);
+console.log(mathMarks);
 
 /* 
     2. Array.prototype.sort(callback(firstEl, secondEl))
@@ -37,25 +43,28 @@ const marks = [18,5,17,12,20,16,14]
     [|4,10,12|]
 */
 
-const letters = ["z","b","a","d","e"];
+const letters = ['z', 'b', 'a', 'd', 'e'];
+letters.sort();
+console.log(letters);
 
-
-const numbers = [10,55,2,250,500,85]
-
+const numbers = [10, 55, 2, 250, 500, 85];
+numbers.sort();
+console.log(numbers);
 
 // On peut aussi trier des tableaux d'objets
 const store = [
     {
-        item: "Cahier",
-        price: 20
+        item: 'Cahier',
+        price: 20,
     },
     {
-        item: "Sac",
-        price: 60
+        item: 'Sac',
+        price: 60,
     },
     {
-        item: "Stylo",
-        price: 2
+        item: 'Stylo',
+        price: 2,
     },
-]
-
+];
+store.sort((a, b) => a.item - b.item);
+console.table(store);

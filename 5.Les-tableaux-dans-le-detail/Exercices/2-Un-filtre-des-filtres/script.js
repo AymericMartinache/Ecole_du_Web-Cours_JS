@@ -55,7 +55,7 @@ console.log('Valeurs restantes : ', truthyValues);
 */
 const names = ['Adrien', 'Paul', 'Victor', 'Alexandre', 'Aurélie', 'Antoine'];
 const filteredNames = names.filter(
-    (name) => name.startsWith('A') && name.length >= 5
+    (name) => name[0] === 'A' && name.length >= 5
 );
 console.log(
     'Noms commençant par la lettre A et ayant une longueur minimale de 5 : ',

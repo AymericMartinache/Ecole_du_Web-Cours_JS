@@ -1,5 +1,5 @@
+//* 1. La propriété "style"
 /* 
-  1. La propriété "style"
 
   Elle peut : 
   A. Retourner le style en ligne d'un élément.
@@ -14,4 +14,12 @@
 
 */
 
+//* Sélection de la box
+const box = document.querySelector('.box');
+console.log('Style de la box : ', box.style);
 
+//* Modification du style
+box.style.backgroundColor = 'blue';
+
+//* Récupération du style
+console.log(window.getComputedStyle(box));

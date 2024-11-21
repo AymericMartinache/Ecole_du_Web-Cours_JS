@@ -21,7 +21,6 @@ document.body.appendChild(document.createElement('input'));
     Peut ajouter plusieurs enfants.    
     Ne retourne rien.
 */
-
 document.body.append('test');
 document.body.append(
     document.createElement('input'),

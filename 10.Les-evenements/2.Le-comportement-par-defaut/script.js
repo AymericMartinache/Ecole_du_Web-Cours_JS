@@ -9,3 +9,28 @@
 
     Testons tout ça...
 */
+
+//* Sélection des liens
+const links = document.querySelectorAll('a');
+
+//* Ajout des écouterus d'événements sur tous les liens
+links.forEach((link) => link.addEventListener('click', handleClick));
+
+//* Fonction handleClick
+function handleClick(event) {
+    // suppression du comportement par défaut (recharge de la page ou redirection)
+    event.preventDefault();
+    console.log('event au clic : ', event);
+}
+
+//* Sélection des formulaires
+const form = document.querySelector('form');
+
+//* Ajout d'un événement lors du submit du formulaire
+form.addEventListener('submit', handleSubmit);
+
+//* Fonction handleSubmit
+function handleSubmit(event) {
+    event.preventDefault();
+    console.log('Formulaire envoyé');
+}

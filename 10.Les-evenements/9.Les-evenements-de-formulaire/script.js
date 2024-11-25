@@ -13,61 +13,66 @@
     Dans tous les cas, il faut bien les connaître.
 */
 
-
+//* 1. submit
 /* 
-    1. submit
-
     Un écouteur d'évènement se déclenche par défaut pour celui-ci dès qu'on clique sur un bouton qui se trouve dans un formulaire.
 
     Il provoque un rafraîchissement de la page car il essaye d'envoyer les données sur la même page si on ne spécifie aucun attribut à l'élément form.
 */
+const form = document.querySelector('form');
 
+form.addEventListener('submit', handleSubmit);
+function handleSubmit(evt) {
+    evt.preventDefault();
+    console.log('Form submitted');
+}
 
+//* 2. input
 /* 
-    2. input
-
     Cet évènement se déclenche à chaque fois qu'il y a un changement dans un input.
-
     Pratique pour faire de la validation de données côté Front. (animation, UX, etc...)
 */
- 
+// const nameInput = document.querySelector('#name');
+// nameInput.addEventListener('input', handleInput);
 
+// function handleInput(evt) {
+//     console.log(evt.target.value);
+// }
 
+//* 3. change
 /* 
-    3. change
-
     Cet évènement ressemble à input mais ne se déclenche que lorsque un input perd le focus.
 
     Pour les inputs checkbox ou radio, l'effet est identique.
 */
+// const nameInput = document.querySelector('#name');
+// nameInput.addEventListener('change', () => console.log('Lost Focus'));
 
-
-
-
+//* 4. invalid
 /* 
-    4. invalid
 
     Celui-ci permet de déclencher le gestionnaire d'évènement quand on essaye d'envoyer un formulaire qui contient des potentielles erreurs.
 
     Par exemple si je rentre un texte au mauvais format dans un input type="email".
 */
+const mailInput = document.querySelector('#email');
+mailInput.addEventListener('invalid', () => console.log('Invalide !'));
 
-
-
-    // Pour changer l'erreur dans la boxe au submit, on utilise setCustomValidity("Votre message")
-
+// Pour changer l'erreur dans la boxe au submit, on utilise setCustomValidity("Votre message")
+mailInput.setCustomValidity('Test');
 
 /* 
     Pour enlever complètement le message d'erreur, appelez cette fonction avec une chaîne vide.
     Attention, cela va potentiellement envoyer le formulaire avec des données mal formées.
 */
 
-
-
+//* 5. focus et blur
 /*
-    5. focus et blur.
 
     L'évènement focus est déclenché quand un élément reçoit le focus, comme lorsqu'on clique sur un input.
 
     L'évènement blur est déclenché lorsqu'un élément perd le focus, comme lorsqu'on clique ailleurs.
 */
+const nameInput = document.querySelector('#name');
+nameInput.addEventListener('focus', () => console.log('Focused'));
+nameInput.addEventListener('blur', () => console.log('Lost focus'));

@@ -10,6 +10,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
 nav {
     text-align: center;
     padding: 14px 0;

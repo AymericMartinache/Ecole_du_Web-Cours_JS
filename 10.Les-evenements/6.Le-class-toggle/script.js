@@ -6,7 +6,15 @@
   C'est la porte ouverte à une infinité d'animations et d'interactions possibles.
 */
 
+const box = document.querySelector('.box');
 
+//* Ajout de lécouteur d'evt
+box.addEventListener('click', toggleAnimation);
+
+//* Fonction toggleAnimation
+function toggleAnimation(evt) {
+    evt.target.classList.toggle('active');
+}
 
 /*
   L'API "classList" est disponible sur tous les éléments du DOM.

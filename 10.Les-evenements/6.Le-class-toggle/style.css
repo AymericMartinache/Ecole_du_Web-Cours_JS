@@ -1,22 +1,29 @@
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #111;
-  padding-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin: 30px 0;
 }
 
 .box {
-  width: 150px;
-  height: 150px;
-  background-color: violet;
-  margin: 0 auto;
-  transition: background-color 0.4s ease-out;
+    width: 150px;
+    height: 150px;
+    background-color: violet;
+    margin: 0 auto;
+    transition: background-color 0.4s ease-out;
 }
 .box.active {
-  background-color: green;
+    background-color: green;
 }

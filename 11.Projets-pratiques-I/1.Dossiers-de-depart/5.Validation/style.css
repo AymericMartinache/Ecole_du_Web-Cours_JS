@@ -1,13 +1,69 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f1f1f1;
-  padding-top: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+.input-group label {
+    color: #333;
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translate(20px, -50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.animated-input {
+    width: 100%;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.validation {
+    color: red;
+    display: none;
+}
+
+/* Animation */
+.input-group:focus-within label,
+.input-group.filled-input label {
+    transform: translate(6px, -80px);
+}
+
+.input-group:focus-within .animated-input,
+.input-group.filled-input .animated-input {
+    outline: 1px solid #111;
+}
+
+.input-group .animated-input.error {
+    outline: 1px solid red;
+}
+.active {
+    display: block;
 }

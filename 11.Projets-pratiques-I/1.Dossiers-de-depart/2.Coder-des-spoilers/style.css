@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,3 +10,70 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+/* Pure CSS */
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    color: #111;
+}
+.hover-spoiler {
+    background-color: #111;
+    color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hover-spoiler:hover {
+    background-color: rgb(180, 180, 180);
+    color: #111;
+    user-select: auto;
+}
+
+/* Image spoiler */
+.img-spoiler-container {
+    margin: 25px 0 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+img {
+    transition: all 0.5s ease-in-out;
+    filter: blur(15px);
+}
+
+.img-spoiler-container:hover img {
+    filter: blur(0);
+}
+
+/* JS spoiler */
+.js-spoiler {
+    background-color: #111;
+    color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.js-spoiler-revealed {
+    background-color: rgb(180, 180, 180);
+    color: #111;
+    user-select: auto;
+}

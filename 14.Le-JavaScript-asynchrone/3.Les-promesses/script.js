@@ -13,3 +13,25 @@
 
   Si c'est un échec, on appelle reject qui nous permet d'exécuter une méthode catch, elle aussi disponible dans le prototype des promesses.
 */
+
+const promise = new Promise((resolve, reject) => {
+    const calculation = 5 + 5;
+    // resolve(calculation);
+    reject('Données non reçues');
+})
+    .then((value) => {
+        console.log(value);
+        return value * 5;
+    })
+    .then((value) => {
+        console.log(value);
+        return value * 555;
+    })
+    .catch((e) => {
+        console.log(e);
+    })
+    .finally(() => {
+        console.log('Je suis toujours exécuté');
+    });
+
+console.dir(promise);

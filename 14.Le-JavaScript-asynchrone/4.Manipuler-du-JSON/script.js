@@ -7,13 +7,12 @@
   Lorsque des applications communiquent entre elles avec du JSON, elles le transforment en chaîne de caractères afin de le rendre plus rapide et maniable, puis le transforment dans le language souhaité lorsqu'elles veulent l'utiliser, par exemple en JavaScript.
 */
 
+//* 1. Le format
 /* 
-    1. Le format
 
     On doit entourer les propriétés de guillements.
     Une propriété d'objet JSON ne peut pas contenir de fonctions, de date ou d'undefined.
 */
-
 /*
 {
   "userName" : "Paul",
@@ -21,25 +20,16 @@
 }
 */
 
-const JSONTextFormat = '{"userName" : "Paul","age": 25}'
+const JSONTextFormat = '{"userName" : "Paul","age": 25}';
 
-
-/*
-    2. Manipuler du JSON
-*/
-
+//* 2. Manipuler du JSON
 // La méthode JSON.parse() analyse du texte JSON et retourne l'objet JS correspondant.
-
+console.log('JSON -> objet JS (parse): ', JSON.parse(JSONTextFormat));
 
 // La méthode JSON.stringify() fait l'inverse, elle transforme un objet JS en JSON.
 const cat = {
-  catName: "Toto",
-  age: 5, 
-  weight: 4 
-}
-
-
-
-
-
-
+    catName: 'Toto',
+    age: 5,
+    weight: 4,
+};
+console.log('objet JS -> JSON : ', JSON.stringify(cat));

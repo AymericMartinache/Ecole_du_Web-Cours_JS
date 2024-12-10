@@ -12,5 +12,33 @@
     On peut les créer de deux façons différentes.
 
     3. Les champs privés : Ils sont seulement utilisables dans les méthodes d'une instance.
+    
 */
 
+class Course {
+    static author = 'John Doe';
+    scholl = 'Ecole du web';
+
+    //* Propirétés privées
+    #privatePrice = 25;
+
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+        // this.school = 'Ecole du web';
+    }
+
+    //* Méthode privée
+    #test() {
+        console.log('Méthode  privée');
+    }
+    getPrivate() {
+        this.#test();
+        return this.#privatePrice;
+    }
+}
+
+console.dir(Course);
+const JSCourse = new Course('JS AZ', 40);
+console.log(JSCourse);
+console.log(JSCourse.getPrivate());

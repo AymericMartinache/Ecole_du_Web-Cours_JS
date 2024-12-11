@@ -8,12 +8,21 @@ Ce projet contient mes notes et mes exercices issus du cours **JavaScript** que 
 Le cours est structuré comme suit :
 
 1. **Les bases de JavaScript**
-
 2. **Les instructions**
-
 3. **Les fonctions dans le détail**
-
 4. **Les objets dans le détail**
+5. **LLes tableaux dans le détail**
+6. **Les chaînes de caractères dans le détail**
+7. **Nombres et Bigint**
+8. **Les dates**
+9. **Le Document Object Model (DOM)**
+10. **Les Les évènements**
+11. **Projets pratiques**
+12. **Fonctionnement JavaScript sur navigateur**
+13. **Le JavaScript moderne**
+14. **Le JavaScript asynchrone**
+15. **Classes et prototypes en JS**
+16. **Tooling et bundlers**
 
 ## 🛠️ Technologies
 

@@ -12,3 +12,23 @@
 
 */
 
+class YoutubeChannel {
+    constructor(channelName, totalViews, channelType) {
+        this.channelName = channelName;
+        this.totalViews = totalViews;
+        this.channelType = channelType;
+    }
+    deleteAccount() {
+        console.log('Channel deleted');
+    }
+    renameChannel(name) {
+        this.channelName = name;
+    }
+}
+
+const channel1 = new YoutubeChannel('Ma chaine', 1000, 'Drole');
+console.log(channel1);
+
+channel1.deleteAccount();
+channel1.renameChannel('Nouveau nom');
+console.log(channel1);

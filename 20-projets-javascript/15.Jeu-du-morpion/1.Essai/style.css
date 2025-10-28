@@ -1,0 +1,56 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.tictactoe-page {
+    min-height: 100vh;
+    background:  #283048;
+    padding: 50px 10px 10px;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.tictactoe__main-title{
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+.tictactoe__main-title--style {
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.tictactoe__cells-container {
+    max-width: 400px;
+    margin: 0 auto 52px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3px;
+    border: 10px solid #c7c6c6;
+    border-radius: 5px;
+    background-color: #c7c6c6;
+}
+.tictactoe__cell {
+    /* Cells are placed with a width equal to a column's width, if we aspect-ratio them to 1/1, it gives a height of the same value, giving us squares. */
+    aspect-ratio: 1/1;
+    background-color: #161c38;
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tictactoe__cell:hover {
+    background: #313f7e;
+}
+.tictactoe__info {
+    font-size: 28px;
+    font-weight: 300;
+}
